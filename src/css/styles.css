@@ -1,18 +1,130 @@
 /**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 /* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+.page-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.post-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 400px;
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.page-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Label styling */
+.post-form-field-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Input & Textarea fields */
+.post-form-field,
+.post-form-message {
+  max-width: 320px;
+  resize: vertical;
+  font-size: 16px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.post-form-field:focus,
+.post-form-message:focus {
+  border-color: #7a4ff7;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Submit button */
+.post-form-sbmt-btn {
+  width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #7a4ff7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-form-sbmt-btn:hover {
+  background-color: #6935e5;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.posts-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.posts-list-item {
+  width: 220px;
+  min-height: 150px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.post-delete-icon {
+  fill: currentColor;
+  transition: fill 0.2s;
+}
+
+.post-delete-btn:hover .post-delete-icon {
+  fill: rgb(161, 136, 136);
+}
+
+.posts-list-item-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 32px 0 8px;
+  color: #333;
+}
+.posts-list-item-text {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
