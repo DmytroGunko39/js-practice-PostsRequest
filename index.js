@@ -2,7 +2,7 @@ import{a as u,i}from"./assets/vendor-2iTncBXz.js";(function(){const t=document.c
 <li class="posts-list-item">
   <button class="post-delete-btn" type="button" data-delete data-post-id='${r}' >
     <svg class="post-delete-icon" width="16" height="16">
-      <use href=${h}></use>;
+      <use href='${h}#icon-trash'></use>;
       </svg>
    </button>
    <h3 class="posts-list-item-title">${t}</h3>
