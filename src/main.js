@@ -22,15 +22,16 @@ const renderPosts = async () => {
 };
 renderPosts();
 
-const onPostFotmSubmit = async event => {
+const onPostFormSubmit = async event => {
   try {
     event.preventDefault();
 
     const { currentTarget: postForm } = event;
+    const { post_title, post_body } = postForm.elements;
 
     const formData = {
-      title: postForm.elements.post_title.value.trim(),
-      body: postForm.elements.post_body.value.trim(),
+      title: post_title.value.trim(),
+      body: post_body.value.trim(),
     };
 
     const formDataValues = Object.values(formData);
@@ -50,7 +51,7 @@ const onPostFotmSubmit = async event => {
       return;
     }
 
-    const { data: post } = createNewPost(formData);
+    const { data: post } = await createNewPost(formData);
     iziToast.success({
       title: 'Success',
       message: `${post.title} added successfully!`,
@@ -90,5 +91,5 @@ const onDeleteBtnClick = async event => {
   }
 };
 
-refs.postForm.addEventListener('submit', onPostFotmSubmit);
+refs.postForm.addEventListener('submit', onPostFormSubmit);
 refs.postList.addEventListener('click', onDeleteBtnClick);
