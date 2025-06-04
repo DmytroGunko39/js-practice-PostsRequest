@@ -1,14 +1,9 @@
-const BASE_URL = 'https://683d54c2199a0039e9e4fc76.mockapi.io/';
+import axios from 'axios';
+axios.defaults.baseURL = 'https://683d54c2199a0039e9e4fc76.mockapi.io/';
 
 //requst for the posts
 export const getAllPosts = () => {
-  return fetch(`${BASE_URL}/posts`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-
-    return response.json();
-  });
+  return axios.get(`/posts`);
 };
 
 export const createNewPost = post => {

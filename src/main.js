@@ -10,7 +10,7 @@ const refs = {
 
 const renderPosts = () => {
   getAllPosts()
-    .then(posts => {
+    .then(({ data: posts }) => {
       const postTemplate = posts
         .map(post => createPostCartTemplate(post))
         .join(' ');
