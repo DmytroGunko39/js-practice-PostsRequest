@@ -6,6 +6,8 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/js-practice-PostsRequest/',
+
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
