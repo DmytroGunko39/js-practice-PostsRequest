@@ -5,7 +5,7 @@ export const createPostCartTemplate = ({ id, title, body }) => {
 <li class="posts-list-item">
   <button class="post-delete-btn" type="button" data-delete data-post-id='${id}' >
     <svg class="post-delete-icon" width="16" height="16">
-      <use href=${icon}></use>;
+      <use href='${icon}#icon-trash'></use>;
       </svg>
    </button>
    <h3 class="posts-list-item-title">${title}</h3>
